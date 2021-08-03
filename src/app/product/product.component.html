@@ -1,0 +1,18 @@
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; width: 70%;" class="mx-auto">
+  <div class=" my-3" *ngFor="let product of products">
+    <div class="card">
+      <a routerLink="/product-detail/{{product.id}}"> <img [src]="product.img" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text">{{product.description}}</p>
+        <!-- <button class="btn btn-primary" (click)="handleClick(product)">Detail</button> -->
+        <button class="btn btn-danger" (click)="handleRemove(product.id)">remove</button>
+        <a routerLink="/product-update/{{product.id}}"><button class="btn btn-success me-2">update</button></a>
+        <span style="font-weight: bold; color: red; float: right;">{{product.price}} $</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="detail" *ngIf="selectedProduct">
+  {{selectedProduct}}
+</div>

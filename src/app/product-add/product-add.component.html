@@ -1,0 +1,26 @@
+<div class="pb-20">
+  <form action="" style="width:40%; margin: 0 auto; padding-top: 50px;">
+    <h3 class="font-bold">ADD PRODUCTS</h3>
+
+    <div class="my-3">
+      <input class="form-control" type="text" name="name" [(ngModel)]="product.name" placeholder="Name...">
+    </div>
+    <div class="my-3">
+      <input class="form-control" type="text" name="description" [(ngModel)]="product.description"
+        placeholder="Description...">
+    </div>
+    <div class="my-3">
+      <label for="">Status: </label>
+      <input type="checkbox" name="status" [(ngModel)]="product.status">
+    </div>
+    <div class="my-3">
+      <input class="form-control" type="text" name="img" [(ngModel)]="product.img" placeholder="Image...">
+    </div>
+    <div class="my-3">
+      <input class="form-control" type="text" name="price" [(ngModel)]="product.price" placeholder="Price...">
+    </div>
+    <div class="my-3">
+      <button class="btn btn-primary" (click)="onHandleAdd()">Add Products</button>
+    </div>
+  </form>
+</div>
